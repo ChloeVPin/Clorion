@@ -69,7 +69,7 @@ window.Dorion = {
   const INJECTED_PLUGIN_OPTIONS = {
     isVisible: true,
     allowedActions: { toggle: debug },
-    loaderName: 'Dorion'
+    loaderName: 'Clorion'
   }
 
   window.SHELTER_INJECTOR_PLUGINS = {
@@ -135,7 +135,7 @@ async function init() {
   )
 
   updateOverlay({
-    subtitle: `Made with ❤️ by ChloeVPin - v${version}`,
+    subtitle: `Clorion v${version} — based on Dorion by SpikeHD`,
     midtitle: 'Localizing JS imports...'
   })
 

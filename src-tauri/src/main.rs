@@ -167,7 +167,7 @@ fn main() {
     .unwrap_or_else(|e| log!("Failed to set application: {:?}", e));
 
   log!(
-    "Starting Dorion version v{}",
+    "Starting Clorion version v{}",
     context
       .config()
       .version
@@ -333,7 +333,7 @@ fn main() {
 
       let config = get_config();
       let preinject = PREINJECT.clone();
-      let title = format!("Dorion - v{}", app.package_info().version);
+      let title = format!("Clorion - v{}", app.package_info().version);
       let mut win = WebviewWindowBuilder::new(app, "main", url_ext)
         .title(title.as_str())
         .resizable(true)
@@ -353,7 +353,7 @@ fn main() {
 
       if !args::is_safemode() {
         // Preinject is bundled with "use strict" so we put it in it's own function to prevent potential client mod issues
-        win = win.initialization_script(format!("console.log(window.location);if(window.__DORION_INIT__) {{throw new Error('Dorion already began initializing');}} window.__DORION_INIT__ = true; {preinject};{client_mods}").as_str());
+        win = win.initialization_script(format!("console.log(window.location);if(window.__DORION_INIT__) {{throw new Error('Clorion already began initializing');}} window.__DORION_INIT__ = true; {preinject};{client_mods}").as_str());
       }
 
       #[cfg(target_os = "windows")]
@@ -404,7 +404,7 @@ fn main() {
             let message =
               format!("Invalid proxy URL: {proxy}");
             log!("{message}");
-            // We should exit, people using proxies probably don't want to use Dorion without it
+            // We should exit, people using proxies probably don't want to use Clorion without it
 
             return Err(
               std::io::Error::new(

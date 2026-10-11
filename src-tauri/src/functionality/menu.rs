@@ -19,7 +19,7 @@ pub fn create_menubar(app: &tauri::AppHandle) -> Result<(), tauri::Error> {
 
   let submenu = SubmenuBuilder::new(app, "App")
     .about(Some(AboutMetadata {
-      name: Some("Dorion".to_string()),
+      name: Some("Clorion".to_string()),
       ..Default::default()
     }))
     .separator()

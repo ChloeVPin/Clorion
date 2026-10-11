@@ -17,6 +17,6 @@ jobs:
 
       - uses: vedantmgoyal9/winget-releaser@19e706d4c9121098010096f9c495a70a7518b30f
         with:
-          identifier: ChloeVPin.Dorion
+          identifier: ChloeVPin.Clorion
           version: ${{ steps.extract-ver.outputs.SEMVER }}
           token: ${{ secrets.WINGET_TOKEN }}

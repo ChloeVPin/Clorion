@@ -16,7 +16,7 @@ pub fn get_release(user: impl AsRef<str>, repo: impl AsRef<str>) -> Result<Relea
   );
 
   let text = ureq::get(&url)
-    .set("User-Agent", "Dorion")
+    .set("User-Agent", "Clorion")
     .call()
     .map_err(|e| format!("Failed to get latest release from GitHub: {e}"))?
     .into_string()
@@ -52,7 +52,7 @@ pub fn download_release(
 ) -> PathBuf {
   let url = format!("https://github.com/{user}/{repo}/releases/download/{tag_name}/{release_name}");
 
-  let response = ureq::get(&url).set("User-Agent", "Dorion").call().unwrap();
+  let response = ureq::get(&url).set("User-Agent", "Clorion").call().unwrap();
 
   let mut file_path = path.clone();
   file_path.push(release_name.as_ref());

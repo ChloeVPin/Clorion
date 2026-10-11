@@ -13,8 +13,8 @@ pub async fn update_check(win: tauri::WebviewWindow) -> Vec<String> {
   let main_rel = maybe_latest_main_release(&win).await;
 
   if main_rel.is_ok() && main_rel.unwrap() {
-    log!("Available update for Dorion!");
-    to_update.push("dorion".to_string());
+    log!("Available update for Clorion!");
+    to_update.push("clorion".to_string());
   }
 
   to_update
@@ -25,7 +25,7 @@ pub async fn do_update(win: tauri::WebviewWindow, to_update: Vec<String>) {
   let updater_path = updater_dir(&win);
   let mut updater = std::process::Command::new(updater_path);
 
-  if to_update.contains(&"dorion".to_string()) {
+  if to_update.contains(&"clorion".to_string()) {
     #[cfg(target_os = "linux")]
     if config_is_local() {
       updater.arg(String::from("--main"));
@@ -72,7 +72,7 @@ pub async fn maybe_latest_main_release(
   let client = async_client();
   let response = client
     .get(url)
-    .header("User-Agent", "Dorion")
+    .header("User-Agent", "Clorion")
     .send()
     .await?;
   let text = response.text().await?;

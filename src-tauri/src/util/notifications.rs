@@ -120,7 +120,7 @@ fn send_notification_internal_other(
   match Notification::new()
     .summary(&title)
     .body(&body)
-    .icon("dorion")
+    .icon("clorion")
     .timeout(Timeout::Milliseconds(5000))
     .action("default", "default")
     .show()

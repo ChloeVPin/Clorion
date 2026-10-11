@@ -19,7 +19,7 @@ Describe what needs to happen in order for the bug to appear.
 
 ### System Info (please complete):
  - **OS Version**: 
- - **Dorion Version**: 
+ - **Clorion Version**: 
  - **Extra Client Mods and Plugins**: 
  - **Any other relevant info**: 
 

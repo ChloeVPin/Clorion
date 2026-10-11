@@ -18,7 +18,7 @@ pub fn init(with_file: bool) {
   }
 }
 
-/// Bridge so injected JS can write to the Dorion log. There is no other way to get
+/// Bridge so injected JS can write to the Clorion log. There is no other way to get
 /// anything out of the webview on macOS, where the devtools console is not visible.
 #[tauri::command]
 pub fn js_log(message: String) {

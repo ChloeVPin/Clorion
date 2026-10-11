@@ -42,7 +42,7 @@ fn prop_variant_from_string(value: &[u16]) -> Result<PROPVARIANT, String> {
   Ok(prop_variant)
 }
 
-/// Tracks whether this Dorion process created the Start Menu
+/// Tracks whether this Clorion process created the Start Menu
 /// shortcut used for WinRT notification identity.
 pub struct WinrtIdentityRegistration {
   shortcut: PathBuf,
@@ -122,7 +122,7 @@ fn create_aumid_shortcut(executable: &Path, shortcut: &Path, app_id: &str) -> Re
   let executable_w = wide(executable.as_os_str());
   let shortcut_w = wide(shortcut.as_os_str());
   let app_id_w = wide(OsStr::new(app_id));
-  let description_w = wide(OsStr::new("Dorion Discord client"));
+  let description_w = wide(OsStr::new("Clorion Discord client"));
 
   let working_directory = executable
     .parent()
@@ -146,7 +146,7 @@ fn create_aumid_shortcut(executable: &Path, shortcut: &Path, app_id: &str) -> Re
       .SetDescription(PCWSTR(description_w.as_ptr()))
       .map_err(|error| format!("SetDescription failed: {error}"))?;
 
-    // Index zero uses the primary icon embedded in Dorion.exe.
+    // Index zero uses the primary icon embedded in Clorion.exe.
     shell_link
       .SetIconLocation(PCWSTR(executable_w.as_ptr()), 0)
       .map_err(|error| format!("SetIconLocation failed: {error}"))?;
@@ -203,7 +203,7 @@ fn create_aumid_shortcut(executable: &Path, shortcut: &Path, app_id: &str) -> Re
 /// Assigns the process AUMID and ensures that the matching per-user
 /// Start Menu shortcut exists.
 pub fn register(app_id: &str) -> Result<WinrtIdentityRegistration, String> {
-  // This must happen before Dorion creates its window.
+  // This must happen before Clorion creates its window.
   let app_id_w = wide(OsStr::new(app_id));
 
   unsafe { SetCurrentProcessExplicitAppUserModelID(PCWSTR(app_id_w.as_ptr())) }
@@ -219,7 +219,7 @@ pub fn register(app_id: &str) -> Result<WinrtIdentityRegistration, String> {
     .join("Windows")
     .join("Start Menu")
     .join("Programs")
-    .join("Dorion.lnk");
+    .join("Clorion.lnk");
 
   let shortcut_parent = shortcut
     .parent()

@@ -10,7 +10,7 @@ pub async fn fetch_image(url: String) -> Option<String> {
   let client = async_client();
   let response = client
     .get(url)
-    .header("User-Agent", "Dorion")
+    .header("User-Agent", "Clorion")
     .send()
     .await
     .unwrap();
@@ -87,7 +87,7 @@ pub fn restart_in_safemode(app: tauri::AppHandle) {
 
   match Command::new(current_exe).arg("--safemode").spawn() {
     Ok(_) => app.exit(0),
-    Err(e) => log!("Failed to restart Dorion in safemode: {e:?}"),
+    Err(e) => log!("Failed to restart Clorion in safemode: {e:?}"),
   }
 }
 

@@ -242,15 +242,15 @@ jobs:
 
       # paths:
       # Windows:
-      # - src-tauri/target/${{ matrix.config.target }}/release/Dorion.exe|plugins|themes|injection|icons
+      # - src-tauri/target/${{ matrix.config.target }}/release/Clorion.exe|plugins|themes|injection|icons
       # Ubuntu:
-      # - src-tauri/target/${{ matrix.config.target }}/release/dorion|plugins|themes|injection|icons
+      # - src-tauri/target/${{ matrix.config.target }}/release/clorion|plugins|themes|injection|icons
       # MacOS:
-      # - src-tauri/target/${{ matrix.config.target }}/release/bundle/macos/Dorion.app
+      # - src-tauri/target/${{ matrix.config.target }}/release/bundle/macos/Clorion.app
       - name: (Windows) Compress build
         if: matrix.config.platform == 'windows-latest'
-        run: cd src-tauri/target/${{ matrix.config.target }}/release && 7z a -tzip -mx9 Dorion.zip
-          Dorion.exe
+        run: cd src-tauri/target/${{ matrix.config.target }}/release && 7z a -tzip -mx9 Clorion.zip
+          Clorion.exe
           updater.exe
           .portable
           plugins/
@@ -261,22 +261,22 @@ jobs:
 
       - name: (Linux) Compress build
         if: matrix.config.platform == 'ubuntu-22.04'
-        run: cd src-tauri/target/${{ matrix.config.target }}/release && tar -czvf dorion.tar.gz Dorion .portable ./plugins ./themes ./injection ./icons ./extension_webkit
+        run: cd src-tauri/target/${{ matrix.config.target }}/release && tar -czvf clorion.tar.gz Clorion .portable ./plugins ./themes ./injection ./icons ./extension_webkit
 
       # Windows portable
       - name: (Windows) Upload portable
         if: matrix.config.platform == 'windows-latest'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-portable
-          path: src-tauri/target/${{ matrix.config.target }}/release/Dorion.zip
+          name: clorion-${{ matrix.config.target }}-portable
+          path: src-tauri/target/${{ matrix.config.target }}/release/Clorion.zip
 
       # Windows MSI
       - name: (Windows) Upload .msi
         if: matrix.config.platform == 'windows-latest'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-msi
+          name: clorion-${{ matrix.config.target }}-msi
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/msi/*.msi
 
       # Windows ARM only supports NSIS right now, but we should upload that too
@@ -284,7 +284,7 @@ jobs:
         if: matrix.config.platform == 'windows-latest'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-nsis
+          name: clorion-${{ matrix.config.target }}-nsis
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/nsis/*.exe
 
       # Ubuntu portable
@@ -292,34 +292,34 @@ jobs:
         if: matrix.config.platform == 'ubuntu-22.04'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-portable
-          path: src-tauri/target/${{ matrix.config.target }}/release/dorion.tar.gz
+          name: clorion-${{ matrix.config.target }}-portable
+          path: src-tauri/target/${{ matrix.config.target }}/release/clorion.tar.gz
 
       # Ubuntu deb
       - name: (Linux) Upload .deb
         if: matrix.config.platform == 'ubuntu-22.04'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-deb
+          name: clorion-${{ matrix.config.target }}-deb
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/deb/*.deb
 
       - name: (Linux) Upload .rpm
         if: matrix.config.platform == 'ubuntu-22.04'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-rpm
+          name: clorion-${{ matrix.config.target }}-rpm
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/rpm/*.rpm
 
       - name: (Linux) Upload .appimage
         if: matrix.config.platform == 'ubuntu-22.04'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-appimage
+          name: clorion-${{ matrix.config.target }}-appimage
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/appimage/*.AppImage
 
       - name: (MacOS) Upload .dmg
         if: matrix.config.platform == 'macos-latest'
         uses: actions/upload-artifact@v4
         with:
-          name: dorion-${{ matrix.config.target }}-dmg
+          name: clorion-${{ matrix.config.target }}-dmg
           path: src-tauri/target/${{ matrix.config.target }}/release/bundle/dmg/*.dmg

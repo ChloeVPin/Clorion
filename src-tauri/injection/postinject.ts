@@ -31,7 +31,7 @@ async function initTitlebar() {
       await titlebarPlugin.onLoad()
     }
   } catch (e) {
-    console.error('[Dorion Titlebar] failed to load:', e)
+    console.error('[Clorion Titlebar] failed to load:', e)
   }
 }
 

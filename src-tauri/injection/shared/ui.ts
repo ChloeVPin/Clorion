@@ -36,7 +36,7 @@ export async function typingAnim() {
 
   if (!title) return
 
-  for (const letter of 'Dorion'.split('')) {
+  for (const letter of 'Clorion'.split('')) {
     title.innerHTML = title.innerHTML.replace('|', '') + letter + '|'
 
     await timeout(100)

@@ -44,9 +44,9 @@
       }
     }
   },
-  "productName": "Dorion",
+  "productName": "Clorion",
   "version": "0.1.0",
-  "identifier": "com.chloevpin.dorion",
+  "identifier": "com.chloevpin.clorion",
   "plugins": {
     "deep-link": {
       "desktop": {

@@ -1,7 +1,7 @@
 <h1 align="center">
  <img height="100px" src="https://raw.githubusercontent.com/ChloeVPin/Dorion-V2/main/src-tauri/icons/icon.png" />
  <br />
- Dorion
+ Clorion
 </h1>
 <div align="center">
  <img src="https://img.shields.io/github/actions/workflow/status/ChloeVPin/Dorion-V2/build.yml" />
@@ -16,10 +16,16 @@
 </div>
 
 <div align="center">
- Dorion is an alternative Discord client aimed towards lower-spec or storage-sensitive PCs that supports themes, plugins, and more!
+ Clorion is an alternative Discord client aimed towards lower-spec or storage-sensitive PCs that supports themes, plugins, and more!
  <br />
  https://discord.gg/agQ9mRdHMZ
 </div>
+
+> **Clorion** is a fork of [Dorion](https://github.com/SpikeHD/Dorion), originally created and
+> maintained by **SpikeHD**. Clorion is maintained independently by
+> [ChloeVPin](https://github.com/ChloeVPin) and exists to fix and extend upstream, beginning with
+> making it work properly on macOS. Clorion is distributed under the same GPL-3.0 terms as
+> Dorion, and all credit for the original work remains with SpikeHD.
 
 # Download
 
@@ -42,25 +48,25 @@
   <tr>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_x64_en-US.msi">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_x64_en-US.msi">x86_64</a>
         <span>|</span>
         <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0.arm64-setup.exe">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_x64.dmg">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_x64.dmg">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_aarch64.dmg">ARM</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_aarch64.dmg">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_amd64.deb">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_amd64.deb">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_armhf.deb">ARM v7</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_armhf.deb">ARM v7</a>
         <span>|</span>
-        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_arm64.deb">ARM64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Clorion_0.1.0_arm64.deb">ARM64</a>
       </div>
     </td>
     <td width="23%">
@@ -101,34 +107,34 @@
   <tr>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-pc-windows-msvc-msi.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-x86_64-pc-windows-msvc-msi.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-pc-windows-msvc-nsis.zip">ARM</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-aarch64-pc-windows-msvc-nsis.zip">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-apple-darwin-dmg.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-x86_64-apple-darwin-dmg.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-apple-darwin-dmg.zip">ARM</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-aarch64-apple-darwin-dmg.zip">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-unknown-linux-gnu-deb.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-x86_64-unknown-linux-gnu-deb.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-deb.zip">ARM v7</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-armv7-unknown-linux-gnueabihf-deb.zip">ARM v7</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-unknown-linux-gnu-deb.zip">ARM64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-aarch64-unknown-linux-gnu-deb.zip">ARM64</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-unknown-linux-gnu-rpm.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-x86_64-unknown-linux-gnu-rpm.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-rpm.zip">ARM v7</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-armv7-unknown-linux-gnueabihf-rpm.zip">ARM v7</a>
         <span>|</span>
-        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-unknown-linux-gnu-rpm.zip">ARM64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/clorion-aarch64-unknown-linux-gnu-rpm.zip">ARM64</a>
       </div>
     </td>
   </tr>
@@ -137,13 +143,13 @@
 </details>
 
 > [!TIP]
-> Dorion can also be used portably or installed via [several package managers](#package-repositories).
-> You can find portable builds in the [releases](https://github.com/ChloeVPin/Dorion-V2/releases/latest/) page. You can also [build](#building) Dorion yourself!
+> Clorion can also be used portably or installed via [several package managers](#package-repositories).
+> You can find portable builds in the [releases](https://github.com/ChloeVPin/Dorion-V2/releases/latest/) page. You can also [build](#building) Clorion yourself!
 
 > [!NOTE]
-> ***MacOS Users***: If opening Dorion gives you "Dorion.app cannot be opened because it is from an unidentified developer", you may just need to run `sudo xattr -rd com.apple.quarantine /Applications/Dorion.app`. Alternatively, you can open the **Privacy & Security** settings pane and scroll down to the **Security** section to remove the quarantine.
+> ***MacOS Users***: If opening Clorion gives you "Clorion.app cannot be opened because it is from an unidentified developer", you may just need to run `sudo xattr -rd com.apple.quarantine /Applications/Clorion.app`. Alternatively, you can open the **Privacy & Security** settings pane and scroll down to the **Security** section to remove the quarantine.
 >
-> ***Windows Users***: Defender may think Dorion is a virus. This just happens sometimes, and if SmartScreen blocks it from running, click "More Info" and "Run Anyways". Feel free to scan Dorion with [Virustotal](https://www.virustotal.com/gui/home/upload)!
+> ***Windows Users***: Defender may think Clorion is a virus. This just happens sometimes, and if SmartScreen blocks it from running, click "More Info" and "Run Anyways". Feel free to scan Clorion with [Virustotal](https://www.virustotal.com/gui/home/upload)!
 
 # Table of Contents
 
@@ -170,7 +176,7 @@
 
 # Package Repositories
 
-I do **not** maintain any instances of Dorion in any package repositories myself, however some very kind people maintain some in their own spare time:
+I do **not** maintain any instances of Clorion in any package repositories myself, however some very kind people maintain some in their own spare time:
 
 * Windows:
   * Shovel/Scoop (Maintained by [Small-Ku](https://github.com/Small-Ku/)):
@@ -180,7 +186,7 @@ I do **not** maintain any instances of Dorion in any package repositories myself
     ```
   * WinGet (Maintained by [headquarter8302](https://github.com/headquarter8302))
     ```sh
-    winget install --id ChloeVPin.Dorion
+    winget install --id ChloeVPin.Clorion
     ```
 * Linux:
   * Arch AUR (Maintained by [YouKnow-sys](https://github.com/YouKnow-sys))
@@ -199,7 +205,7 @@ I do **not** maintain any instances of Dorion in any package repositories myself
     ```
 
 > [!NOTE]
-> Maintaining Dorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/ChloeVPin/Dorion-V2/pulls) to add it here!
+> Maintaining Clorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/ChloeVPin/Dorion-V2/pulls) to add it here!
 
 # Features
 
@@ -215,8 +221,8 @@ I do **not** maintain any instances of Dorion in any package repositories myself
 
 ## Plugins
 
-Dorion comes with [shelter](https://github.com/uwu/shelter), so that should cover at least some plugin-related needs. You can also enable client mods like [Vencord](https://github.com/vendicated/vencord) inside the Dorion settings page.
-If you want to install plugins not available within the Dorion settings page, ensure you are downloading a browser-compatible version.
+Clorion comes with [shelter](https://github.com/uwu/shelter), so that should cover at least some plugin-related needs. You can also enable client mods like [Vencord](https://github.com/vendicated/vencord) inside the Clorion settings page.
+If you want to install plugins not available within the Clorion settings page, ensure you are downloading a browser-compatible version.
 
 > [!NOTE]
 > Want official support for another client mod? As long as it works on the web, feel free to submit a [feature request](https://github.com/ChloeVPin/Dorion-V2/issues/new/choose)!
@@ -228,7 +234,7 @@ If you want to install plugins not available within the Dorion settings page, en
 
 ## Themes
 
-Dorion supports all themes, BetterDiscord and others, with a [couple caveats](#known-issues).
+Clorion supports all themes, BetterDiscord and others, with a [couple caveats](#known-issues).
 
 [Jump to "Using Plugins and Themes"](#using-plugins-and-themes)
 
@@ -242,13 +248,13 @@ Dorion supports all themes, BetterDiscord and others, with a [couple caveats](#k
 | Voice                                          | ✓             | ~             | ✗[^3]            | ✓               |
 | Themes                                         | ✓             | ~             | ✓                | ✓               |
 | Shelter                                        | ✓             | ~             | ✓                | ✓               |
-| Dorion Plugins                                 | ✓             | ~             | ✓                | ✓               |
+| Clorion Plugins                                 | ✓             | ~             | ✓                | ✓               |
 
 </div>
 
-[^1]: Windows 7 support is possible by installing API extensions, such as VxKex. It could break at any point, and if this happens, I probably won't put much effort into fixing it (PRs always welcome of course!). You may also need to manually install [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) if Dorion doesn't open after installing!
+[^1]: Windows 7 support is possible by installing API extensions, such as VxKex. It could break at any point, and if this happens, I probably won't put much effort into fixing it (PRs always welcome of course!). You may also need to manually install [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) if Clorion doesn't open after installing!
 
-[^2]: Some people report Dorion freezing on Linux, particularly when GIFs are playing. This is, as far as I can tell, a bug in WebkitGTK.
+[^2]: Some people report Clorion freezing on Linux, particularly when GIFs are playing. This is, as far as I can tell, a bug in WebkitGTK.
 
 [^3]: Support for WebRTC is hidden behind a build-time flag that is unused in most distros, and if it were, the implementation is still incomplete. This will be available when WebkitGTK ships with WebRTC support.
 
@@ -293,7 +299,7 @@ Dorion supports all themes, BetterDiscord and others, with a [couple caveats](#k
 7. Build!
 
     ```sh
-    # Build Dorion...
+    # Build Clorion...
     pnpm tauri build
 
     # ...or to debug/open in dev mode
@@ -335,17 +341,17 @@ If you submit an issue or ask a question in the Discord, it's likely you will be
   * MacOS: `~/Library/Application Support/dorion/webdata` & `~/Library/Application Support/dorion/config.json`
 
 ## Windows
-### Dorion not opening
+### Clorion not opening
 * Try installing via MSI instead of the `.zip` file
 * Try using the `.zip` file instead of the MSI
-* (If using the `.zip` file) make sure all files were extracted properly. Ensure you are extracting Dorion and it's contents into it's own folder.
+* (If using the `.zip` file) make sure all files were extracted properly. Ensure you are extracting Clorion and it's contents into it's own folder.
 * [Reinstall WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
   * Fully uninstall and reinstall.
   * If you are having trouble uninstalling it, or the installer says its already installed even though you uninstalled, try deleting this registry folder and uninstalling again `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}`
 
 ## Linux
 ### White/blank/frozen screen
-* Run Dorion with either, or both, of the following environment variables:
+* Run Clorion with either, or both, of the following environment variables:
   ```sh
   WEBKIT_DISABLE_COMPOSITING_MODE=1
   WEBKIT_DISABLE_DMABUF_RENDERER=1
@@ -375,7 +381,7 @@ and like so on Linux:
         └── theme.css
 ```
 
-so if you download a plugin, extension, or theme, just pop it into the `plugins`/`extensions`/`themes` folder. If you need help finding them, there are buttons in Dorion settings that'll take you where you need!
+so if you download a plugin, extension, or theme, just pop it into the `plugins`/`extensions`/`themes` folder. If you need help finding them, there are buttons in Clorion settings that'll take you where you need!
 
 > [!NOTE]
 > Themes can also be installed by clicking `Install Theme from Link` in Theme settings, if you prefer

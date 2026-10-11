@@ -150,7 +150,7 @@ plugin injects its controls. Working tree: 6 modified, 3 untracked.
 
 1. **Stale-binary red herring.** The "postinject never executes" conclusion was wrong: the last
    app run (20:18) predated the probes added at 20:20–20:22, and `flate!` embeds the bundle at
-   *compile* time, so `cargo check` + a stale `target/debug/Dorion` can never show them.
+   *compile* time, so `cargo check` + a stale `target/debug/Clorion` can never show them.
    `get_injection_js` was called all along.
 
 2. **The real one — `shelter` didn't exist yet.** The vendored plugin is bundled into
@@ -261,3 +261,26 @@ From `docs/macos-issue-index.md` (index of 427 upstream issues, 65 macOS-matchin
   Regenerable with `gh api`.
 - `/tmp/dorion-titlebar-PRISTINE.js` — unmodified upstream copy of the vendored plugin, for
   re-diffing if the vendoring needs redoing.
+
+---
+
+## 10. Rename (done after the titlebar fix)
+
+The project is now **Clorion**, maintained by ChloeVPin, forked from Dorion by SpikeHD.
+Version reset to 0.1.0. `upstream` git remote removed. See the commit message for the full
+list. Things that intentionally still say "Dorion":
+
+- `window.Dorion`, `window.__DORION_CONFIG__`, `__DORION_INIT__`, `dorion-*` CSS ids and
+  `data-dorion-platform` — these are the public plugin/theme API. Remote plugins and user
+  themes read them; renaming breaks them.
+- The `SHELTER_INJECTOR_PLUGINS` keys (`'Dorion Settings'`, `'Dorion Tray'`, ...) — these are
+  the real names of plugins fetched from spikehd.dev.
+- `https://spikehd.dev/shelter-plugins/*` URLs and the SpikeHD git dependencies in
+  `Cargo.toml` — third-party origins the app still needs.
+
+The data directory moved `%appdata%/dorion` -> `%appdata%/clorion`; the old folder on this
+machine was renamed by hand so the Discord session survived.
+
+Dev-only noise: `Failed to set application: CouldNotSet("com.chloevpin.clorion")` is expected.
+`notify_rust::set_application` calls `LSCopyApplicationURLsForBundleIdentifier`, which only
+succeeds once an app with that bundle id is actually installed. Harmless until then.

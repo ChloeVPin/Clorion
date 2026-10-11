@@ -34,56 +34,56 @@ jobs:
             
             # Determine the new filename based on the artifact name
             case "$base_name" in
-              "dorion-aarch64-apple-darwin-dmg")
-                new_name="Dorion_${{ inputs.version }}_aarch64.dmg"
+              "clorion-aarch64-apple-darwin-dmg")
+                new_name="Clorion_${{ inputs.version }}_aarch64.dmg"
                 ;;
-              "dorion-aarch64-pc-windows-msvc-nsis")
-                new_name="Dorion_${{ inputs.version }}.arm64-setup.exe"
+              "clorion-aarch64-pc-windows-msvc-nsis")
+                new_name="Clorion_${{ inputs.version }}.arm64-setup.exe"
                 ;;
-              "dorion-aarch64-pc-windows-msvc-portable")
-                new_name="Dorion_${{ inputs.version }}_win_arm64_portable.zip"
+              "clorion-aarch64-pc-windows-msvc-portable")
+                new_name="Clorion_${{ inputs.version }}_win_arm64_portable.zip"
                 ;;
-              "dorion-aarch64-unknown-linux-gnu-deb")
-                new_name="Dorion_${{ inputs.version }}_arm64.deb"
+              "clorion-aarch64-unknown-linux-gnu-deb")
+                new_name="Clorion_${{ inputs.version }}_arm64.deb"
                 ;;
-              "dorion-aarch64-unknown-linux-gnu-portable")
-                new_name="Dorion_${{ inputs.version }}_arm64_portable.tar.gz"
+              "clorion-aarch64-unknown-linux-gnu-portable")
+                new_name="Clorion_${{ inputs.version }}_arm64_portable.tar.gz"
                 ;;
-              "dorion-aarch64-unknown-linux-gnu-rpm")
-                new_name="Dorion_${{ inputs.version }}-1.aarch64.rpm"
+              "clorion-aarch64-unknown-linux-gnu-rpm")
+                new_name="Clorion_${{ inputs.version }}-1.aarch64.rpm"
                 ;;
-              "dorion-armv7-unknown-linux-gnueabihf-deb")
-                new_name="Dorion_${{ inputs.version }}_armhf.deb"
+              "clorion-armv7-unknown-linux-gnueabihf-deb")
+                new_name="Clorion_${{ inputs.version }}_armhf.deb"
                 ;;
-              "dorion-armv7-unknown-linux-gnueabihf-portable")
-                new_name="Dorion_${{ inputs.version }}_armv7_portable.tar.gz"
+              "clorion-armv7-unknown-linux-gnueabihf-portable")
+                new_name="Clorion_${{ inputs.version }}_armv7_portable.tar.gz"
                 ;;
-              "dorion-armv7-unknown-linux-gnueabihf-rpm")
-                new_name="Dorion_${{ inputs.version }}-1.armhfp.rpm"
+              "clorion-armv7-unknown-linux-gnueabihf-rpm")
+                new_name="Clorion_${{ inputs.version }}-1.armhfp.rpm"
                 ;;
-              "dorion-x86_64-apple-darwin-dmg")
-                new_name="Dorion_${{ inputs.version }}_x64.dmg"
+              "clorion-x86_64-apple-darwin-dmg")
+                new_name="Clorion_${{ inputs.version }}_x64.dmg"
                 ;;
-              "dorion-x86_64-pc-windows-msvc-nsis")
-                new_name="Dorion_${{ inputs.version }}_x64-setup.exe"
+              "clorion-x86_64-pc-windows-msvc-nsis")
+                new_name="Clorion_${{ inputs.version }}_x64-setup.exe"
                 ;;
-              "dorion-x86_64-pc-windows-msvc-msi")
-                new_name="Dorion_${{ inputs.version }}_x64_en-US.msi"
+              "clorion-x86_64-pc-windows-msvc-msi")
+                new_name="Clorion_${{ inputs.version }}_x64_en-US.msi"
                 ;;
-              "dorion-x86_64-pc-windows-msvc-portable")
-                new_name="Dorion_${{ inputs.version }}_win64_portable.zip"
+              "clorion-x86_64-pc-windows-msvc-portable")
+                new_name="Clorion_${{ inputs.version }}_win64_portable.zip"
                 ;;
-              "dorion-x86_64-unknown-linux-gnu-appimage")
-                new_name="Dorion_${{ inputs.version }}_amd64.AppImage"
+              "clorion-x86_64-unknown-linux-gnu-appimage")
+                new_name="Clorion_${{ inputs.version }}_amd64.AppImage"
                 ;;
-              "dorion-x86_64-unknown-linux-gnu-deb")
-                new_name="Dorion_${{ inputs.version }}_amd64.deb"
+              "clorion-x86_64-unknown-linux-gnu-deb")
+                new_name="Clorion_${{ inputs.version }}_amd64.deb"
                 ;;
-              "dorion-x86_64-unknown-linux-gnu-portable")
-                new_name="Dorion_${{ inputs.version }}_amd64_portable.tar.gz"
+              "clorion-x86_64-unknown-linux-gnu-portable")
+                new_name="Clorion_${{ inputs.version }}_amd64_portable.tar.gz"
                 ;;
-              "dorion-x86_64-unknown-linux-gnu-rpm")
-                new_name="Dorion_${{ inputs.version }}-1.x86_64.rpm"
+              "clorion-x86_64-unknown-linux-gnu-rpm")
+                new_name="Clorion_${{ inputs.version }}-1.x86_64.rpm"
                 ;;
               *)
                 # Skip unknown artifacts

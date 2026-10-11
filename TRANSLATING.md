@@ -1,6 +1,6 @@
 # Translating
 
-Thank you for your interest in translating parts of Dorion! As of now, there is no Weblate/Crowdin interface, but don't worry, translating is still easy!
+Thank you for your interest in translating parts of Clorion! As of now, there is no Weblate/Crowdin interface, but don't worry, translating is still easy!
 
 ## How-to
 
@@ -14,4 +14,4 @@ To create a new translation:
 5. Commit + push
 6. Make a pull request
 
-That's it! Once your PR merged, you will be able to see your translation automatically apply in Dorion based on what you set your system language to.
+That's it! Once your PR merged, you will be able to see your translation automatically apply in Clorion based on what you set your system language to.

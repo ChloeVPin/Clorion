@@ -6,17 +6,17 @@ function applyWebRtcPolicy() {
   const setting = chrome?.privacy?.network?.webRTCIPHandlingPolicy;
 
   if (!setting) {
-    console.warn("[Dorion WebRTC] chrome.privacy.network.webRTCIPHandlingPolicy is unavailable");
+    console.warn("[Clorion WebRTC] chrome.privacy.network.webRTCIPHandlingPolicy is unavailable");
     return;
   }
 
   setting.set({ value: POLICY }, () => {
     if (chrome.runtime.lastError) {
-      console.warn("[Dorion WebRTC] Failed to set WebRTC policy:", chrome.runtime.lastError.message);
+      console.warn("[Clorion WebRTC] Failed to set WebRTC policy:", chrome.runtime.lastError.message);
       return;
     }
 
-    console.log("[Dorion WebRTC] Applied WebRTC IP handling policy:", POLICY);
+    console.log("[Clorion WebRTC] Applied WebRTC IP handling policy:", POLICY);
   });
 }
 

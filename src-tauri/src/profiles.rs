@@ -7,7 +7,7 @@ use crate::{
 };
 
 pub fn init_profiles_folders() {
-  // Create %appdata%/dorion/profiles/default
+  // Create %appdata%/clorion/profiles/default
   let default_profile_folder = profiles_dir().join("default");
 
   if !default_profile_folder.exists() {

@@ -6,7 +6,7 @@ use crate::github::{download_release, get_release};
 #[cfg(not(target_os = "linux"))]
 mod github;
 
-// If you are reading this, you probably don't need to be. Dorion updates on it's own, silly!
+// If you are reading this, you probably don't need to be. Clorion updates on it's own, silly!
 struct UpdaterArguments {
   main: bool,
   #[cfg(target_os = "windows")]
@@ -34,7 +34,7 @@ pub fn main() {
 }
 
 pub fn elevate() {
-  // This should always be run by Dorion itself, which means it will likely not have admin perms, so we request them before anything else
+  // This should always be run by Clorion itself, which means it will likely not have admin perms, so we request them before anything else
   #[cfg(target_os = "windows")]
   reopen_as_elevated();
 
@@ -116,7 +116,7 @@ pub fn update_main() {
     }
   };
 
-  println!("Latest Dorion release: {}", release.tag_name);
+  println!("Latest Clorion release: {}", release.tag_name);
 
   // Find the release that ends with ".dmg", that's the MacOS release
   let mut release_name = String::new();
@@ -140,18 +140,18 @@ pub fn update_main() {
     path.clone(),
   );
 
-  // Kill Dorion BEFORE we install
-  println!("Attempting to kill Dorion process...");
+  // Kill Clorion BEFORE we install
+  println!("Attempting to kill Clorion process...");
 
   let mut cmd = std::process::Command::new("taskkill");
   cmd.arg("/F");
   cmd.arg("/IM");
-  cmd.arg("Dorion.exe");
+  cmd.arg("Clorion.exe");
 
   match cmd.spawn() {
     Ok(mut p) => p.wait().unwrap(),
     Err(e) => {
-      println!("Failed to kill Dorion process: {}", e);
+      println!("Failed to kill Clorion process: {}", e);
       return;
     }
   };
@@ -168,7 +168,7 @@ pub fn update_main() {
   match cmd.spawn() {
     Ok(_) => (),
     Err(e) => {
-      println!("Failed to kill Dorion process: {}", e);
+      println!("Failed to kill Clorion process: {}", e);
     }
   };
 
@@ -186,7 +186,7 @@ pub fn update_main_kinda() {
     }
   };
 
-  println!("Latest Dorion release: {}", release.tag_name);
+  println!("Latest Clorion release: {}", release.tag_name);
 
   // Find the release that ends with ".zip", that should be the Windows release
   let mut release_name = String::new();
@@ -224,18 +224,18 @@ pub fn update_main_kinda() {
     }
   };
 
-  println!("Attempting to kill Dorion process...");
+  println!("Attempting to kill Clorion process...");
 
-  // Also kill the main Dorion process if we can
+  // Also kill the main Clorion process if we can
   let mut cmd = std::process::Command::new("taskkill");
   cmd.arg("/F");
   cmd.arg("/IM");
-  cmd.arg("Dorion.exe");
+  cmd.arg("Clorion.exe");
 
   match cmd.spawn() {
     Ok(_) => (),
     Err(e) => {
-      println!("Failed to kill Dorion process: {}", e);
+      println!("Failed to kill Clorion process: {}", e);
       return;
     }
   };
@@ -256,7 +256,7 @@ pub fn update_main() {
     }
   };
 
-  println!("Latest Dorion release: {}", release.tag_name);
+  println!("Latest Clorion release: {}", release.tag_name);
 
   // Find the release that ends with ".dmg", that's the MacOS release
   let mut release_name = String::new();
@@ -300,17 +300,17 @@ pub fn update_main() {
     }
   }
 
-  println!("Attempting to kill Dorion process...");
+  println!("Attempting to kill Clorion process...");
 
-  // Also kill the main Dorion process if we can
+  // Also kill the main Clorion process if we can
   let mut cmd = std::process::Command::new("pkill");
   cmd.arg("-9");
-  cmd.arg("Dorion");
+  cmd.arg("Clorion");
 
   match cmd.spawn() {
     Ok(_) => {}
     Err(e) => {
-      println!("Failed to kill Dorion: {:?}", e);
+      println!("Failed to kill Clorion: {:?}", e);
     }
   }
 

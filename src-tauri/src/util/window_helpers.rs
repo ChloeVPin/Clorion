@@ -26,10 +26,10 @@ fn useragent(_chrome_version: Option<String>) -> String {
 }
 
 pub fn clear_cache_check() {
-  let appdata = dirs::data_dir().unwrap_or_default().join("dorion");
+  let appdata = dirs::data_dir().unwrap_or_default().join("clorion");
 
   if !appdata.exists() {
-    std::fs::create_dir_all(&appdata).expect("Failed to create dorion appdata dir!");
+    std::fs::create_dir_all(&appdata).expect("Failed to create clorion appdata dir!");
   }
 
   let cache_file = appdata.join("clear_cache");
@@ -45,10 +45,10 @@ pub fn clear_cache_check() {
 pub fn set_clear_cache(win: tauri::WebviewWindow) {
   // Create a file called "clear_cache" in the appdata dir
   // This will be read by the window when it closes
-  let appdata = dirs::data_dir().unwrap_or_default().join("dorion");
+  let appdata = dirs::data_dir().unwrap_or_default().join("clorion");
 
   if !appdata.exists() {
-    std::fs::create_dir_all(&appdata).expect("Failed to create dorion appdata dir!");
+    std::fs::create_dir_all(&appdata).expect("Failed to create clorion appdata dir!");
   }
 
   let cache_file = appdata.join("clear_cache");
@@ -60,7 +60,7 @@ pub fn set_clear_cache(win: tauri::WebviewWindow) {
 
 #[tauri::command]
 pub fn clear_cache() {
-  // Remove %appdata%/dorion/webdata
+  // Remove %appdata%/clorion/webdata
   let webdata_dir = get_webdata_dir();
 
   if webdata_dir.exists() {
@@ -119,7 +119,7 @@ pub fn window_zoom_level(win: tauri::WebviewWindow, value: Option<f64>) {
 
 // Removing the top bar.
 //
-// Windows/Linux: strip the frame entirely, since Dorion draws its own buttons.
+// Windows/Linux: strip the frame entirely, since Clorion draws its own buttons.
 //
 // macOS: `set_decorations(false)` maps to a *borderless* window, which would also remove
 // the traffic lights — but those are wanted, they're the native affordance macOS users
