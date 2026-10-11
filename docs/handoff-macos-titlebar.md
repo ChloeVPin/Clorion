@@ -7,11 +7,11 @@ and running app; where something was NOT verified it is called out explicitly.
 
 ## 1. Mission
 
-`ChloeVPin/Dorion-V2` is our own standalone continuation of **SpikeHD/Dorion** — a tiny
+`ChloeVPin/Clorion` is our own standalone continuation of **SpikeHD/Dorion** — a tiny
 alternative Discord client (Tauri v2, Rust backend + TypeScript/JS injection, GPL-3.0).
 
 - Upstream: <https://github.com/SpikeHD/Dorion>
-- Ours: <https://github.com/ChloeVPin/Dorion-V2>
+- Ours: <https://github.com/ChloeVPin/Clorion>
 - Local path: `/Users/chloe/desktop/developer/Dorion-V2`
 - Created as a **standalone repo, not a GitHub fork** (mirror-cloned, full history: 1572 commits,
   fork badge absent, `parent: none`). Base commit `9f75ff4`, matches upstream exactly.

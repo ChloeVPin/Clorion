@@ -18,7 +18,9 @@
       <string>com.chloevpin.clorion</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <!-- register the dorion:// scheme -->
+        <!-- register the clorion:// scheme -->
+        <string>clorion</string>
+        <!-- keep dorion:// working so existing links/invites don't break -->
         <string>dorion</string>
         <!-- register the discord:// scheme -->
         <string>discord</string>

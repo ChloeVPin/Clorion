@@ -9,7 +9,7 @@ assignees: ''
 
 ### Issue Checklist
 - [ ] I have searched for my issue already
-- [ ] I have read the [Troubleshooting](https://github.com/ChloeVPin/Dorion-V2?tab=readme-ov-file#troubleshooting) section of the README
+- [ ] I have read the [Troubleshooting](https://github.com/ChloeVPin/Clorion?tab=readme-ov-file#troubleshooting) section of the README
 
 ### Why should this be included?
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

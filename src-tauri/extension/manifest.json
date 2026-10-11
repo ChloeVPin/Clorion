@@ -1,7 +1,7 @@
 {
   "name": "Clorion Header Destroyer",
   "version": "1.1",
-  "homepage_url": "https://github.com/ChloeVPin/Dorion-V2",
+  "homepage_url": "https://github.com/ChloeVPin/Clorion",
   "description": "Destroy CSP in Discord request headers and configure WebRTC IP handling",
   "manifest_version": 3,
   "permissions": [

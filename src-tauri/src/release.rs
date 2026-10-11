@@ -68,7 +68,7 @@ pub async fn do_update(win: tauri::WebviewWindow, to_update: Vec<String>) {
 pub async fn maybe_latest_main_release(
   win: &tauri::WebviewWindow,
 ) -> Result<bool, Box<dyn std::error::Error + Sync + Send>> {
-  let url = "https://api.github.com/repos/ChloeVPin/Dorion-V2/releases/latest";
+  let url = "https://api.github.com/repos/ChloeVPin/Clorion/releases/latest";
   let client = async_client();
   let response = client
     .get(url)

@@ -51,6 +51,8 @@
     "deep-link": {
       "desktop": {
         "schemes": [
+          "clorion",
+          "dorion",
           "discord"
         ]
       }

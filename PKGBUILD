@@ -9,7 +9,7 @@ license=('GPL3')
 depends=('libayatana-appindicator' 'webkit2gtk' 'gtk3' 'gst-plugins-good')
 provides=('dorion')
 conflicts=('dorion')
-source=("https://github.com/ChloeVPin/Dorion-V2/releases/download/v${pkgver}/clorion_${pkgver}_amd64.deb")
+source=("https://github.com/ChloeVPin/Clorion/releases/download/v${pkgver}/clorion_${pkgver}_amd64.deb")
 sha256sums=('e29cb66b447ba6a733e5aded5bb768ab4678f3eeb32c254da79117699ba05967')
 
 package() {

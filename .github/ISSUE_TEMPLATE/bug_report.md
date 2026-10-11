@@ -9,7 +9,7 @@ assignees: ''
 
 ### Issue Checklist
 - [ ] I have searched for my issue already
-- [ ] I have read the [Troubleshooting](https://github.com/ChloeVPin/Dorion-V2?tab=readme-ov-file#troubleshooting) section of the README
+- [ ] I have read the [Troubleshooting](https://github.com/ChloeVPin/Clorion?tab=readme-ov-file#troubleshooting) section of the README
 
 ### Describe the bug
 Describe the problem here.
@@ -30,7 +30,7 @@ Under most circumstances, you should always try disabling client mods/plugins be
 
 Please also look at the "Troubleshooting" section of the README, as it shows you how to get logs that could be very helpful in solving the issue:
 
-https://github.com/ChloeVPin/Dorion-V2?tab=readme-ov-file#troubleshooting
+https://github.com/ChloeVPin/Clorion?tab=readme-ov-file#troubleshooting
 -->
 
 ### Additional context/Screenshots
