@@ -432,7 +432,43 @@ const waitDiscordPanel = (callbackFn) => waitForElm([
 // wanted there -- `postinject` calls this instead of `onLoad()`. The drag region still is:
 // `TitleBarStyle::Overlay` makes the title bar transparent and full-size, so the webview
 // covers it and the window would otherwise not be draggable.
+const DRAG_STRIP_ID = "clorion-drag-strip";
+
+// Discord only renders a channel header once logged in and its UI has settled. Before that
+// -- and on the login screen, which has no header at all -- there is nothing to hang a drag
+// region off and the window cannot be moved. Add a strip along the top in that case, then
+// hand over to Discord's own region once it appears.
+const ensureWindowDraggable = () => {
+	// Must exclude our own strip: it carries the same attribute, so a naive query matches
+	// itself and the strip ends up removing and re-adding itself on every tick.
+	const hasNativeRegion = () => Array.from(document.querySelectorAll("[data-tauri-drag-region]"))
+		.some((el) => el.id !== DRAG_STRIP_ID);
+
+	if (hasNativeRegion()) return;
+
+	const el = document.createElement("div");
+	el.id = DRAG_STRIP_ID;
+	el.setAttribute("data-tauri-drag-region", "true");
+	// Full width and deep enough to grab comfortably. On the login screen the top of the
+	// page is empty anyway, so it costs nothing.
+	el.style.cssText = "position:fixed;top:0;left:0;width:100%;height:44px;z-index:2147483647;";
+	document.body?.appendChild(el);
+
+	// Hand over exactly once, when Discord provides a real region. No polling loop --
+	// that is what made this feel unreliable.
+	const observer = new MutationObserver(() => {
+		if (!hasNativeRegion()) return;
+
+		el.remove();
+		observer.disconnect();
+	});
+
+	observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ["data-tauri-drag-region"] });
+	setTimeout(() => observer.disconnect(), 120000);
+};
 const injectDragRegionOnly = async () => {
+	ensureWindowDraggable();
+
 	const discordPanel = await waitDiscordPanel();
 	const discordBar = await waitForElm([
 		"div[data-layer=base]>div[class*=container]",

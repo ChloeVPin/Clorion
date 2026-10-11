@@ -367,8 +367,17 @@ fn main() {
         .browser_extensions_enabled(true);
 
       if !args::is_safemode() {
+        // Dev-only: `CLORION_DEBUG_SPLASH=8 ./Clorion` holds the loading splash open for N
+        // seconds so the spinner can actually be looked at. Startup is otherwise ~1s.
+        let debug_splash = std::env::var("CLORION_DEBUG_SPLASH").unwrap_or_default();
+        let debug_splash = if debug_splash.trim().is_empty() {
+          String::new()
+        } else {
+          format!("window.__CLORION_DEBUG_SPLASH__ = Number({debug_splash:?});")
+        };
+
         // Preinject is bundled with "use strict" so we put it in it's own function to prevent potential client mod issues
-        win = win.initialization_script(format!("console.log(window.location);if(window.__DORION_INIT__) {{throw new Error('Clorion already began initializing');}} window.__DORION_INIT__ = true; {preinject};{client_mods}").as_str());
+        win = win.initialization_script(format!("console.log(window.location);if(window.__DORION_INIT__) {{throw new Error('Clorion already began initializing');}} window.__DORION_INIT__ = true; {debug_splash}; {preinject};{client_mods}").as_str());
       }
 
       #[cfg(target_os = "windows")]

@@ -1,5 +1,5 @@
 import { badPostMessagePatch, proxyFetch, proxyXHR, proxyAddEventListener, proxyOpen, proxyNotification } from './shared/recreate'
-import { extraCssChangeWatch, safemodeTimer, typingAnim } from './shared/ui'
+import { extraCssChangeWatch, initSpinner, safemodeTimer } from './shared/ui'
 import { cssSanitize, fetchImage, isJson, waitForApp, waitForElm, saferEval, timeout } from './shared/util'
 import { waitForElmEx } from './shared/wait_elm'
 
@@ -139,7 +139,7 @@ async function init() {
     midtitle: 'Localizing JS imports...'
   })
 
-  typingAnim()
+  initSpinner()
 
   // Discord Web depends on the `beforeunload` event being dispatched by the browser when
   // a tab is closed. However, this event is not triggered by the Webview so we need to
@@ -169,6 +169,7 @@ async function init() {
     midtitle: 'Getting injection JS...'
   })
 
+
   const injectionJs = await invoke('get_injection_js', {
     themeJs,
   })
@@ -178,6 +179,14 @@ async function init() {
   updateOverlay({
     midtitle: 'Done!'
   })
+
+
+  // Dev-only hold so the loading splash can actually be inspected. Startup is ~1s otherwise.
+  const debugSplash = (window as any).__CLORION_DEBUG_SPLASH__
+  if (debugSplash > 0) {
+    console.log(`[Debug] Holding splash for ${debugSplash}s`)
+    await new Promise((resolve) => setTimeout(resolve, debugSplash * 1000))
+  }
 
   // Remove loading container
   const loadingContainer = document.querySelector('#loadingContainer') as HTMLDivElement
@@ -195,10 +204,12 @@ async function init() {
  * Nasty helper function _for updating the text on the overlay
  */
 async function updateOverlay(toUpdate: Record<string, string>) {
-  const midtitle = document.getElementById('#midtitle')
-  const subtitle = document.getElementById('#subtitle')
-  const safemode = document.getElementById('#safemode')
-  const logs = document.getElementById('#logContainer')
+  // NOTE: these used to be looked up as '#midtitle' etc. getElementById takes a bare ID,
+  // not a selector, so every one of these was null and no loading message ever rendered.
+  const midtitle = document.getElementById('midtitle')
+  const subtitle = document.getElementById('subtitle')
+  const safemode = document.getElementById('safemode')
+  const logs = document.getElementById('logContainer')
 
   for (const [key, value] of Object.entries(toUpdate)) {
     if (key === 'midtitle' && midtitle) midtitle.innerHTML = value

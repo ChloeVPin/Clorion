@@ -47,7 +47,11 @@ async function initTitlebar() {
   // Load up our extra css
   applyExtraCSS()
 
-  await initTitlebar()
+  // NOTE: deliberately not awaited. The plugin's macOS path waits on Discord's channel
+  // header, which never appears on the login screen -- awaiting here hung the rest of this
+  // bundle forever, which meant themes (injected at the bottom) silently never applied
+  // until you were logged in. The plugin guards its own failures, so fire and forget.
+  initTitlebar()
 
   // The comment ahead is read by tauri and used to insert theme injection code
 
