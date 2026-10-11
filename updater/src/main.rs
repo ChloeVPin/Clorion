@@ -108,7 +108,7 @@ pub fn reopen_as_elevated() {
  */
 #[cfg(target_os = "windows")]
 pub fn update_main() {
-  let release = match get_release("SpikeHD", "Dorion") {
+  let release = match get_release("ChloeVPin", "Dorion-V2") {
     Ok(release) => release,
     Err(e) => {
       println!("Failed to get release: {}", e);
@@ -133,8 +133,8 @@ pub fn update_main() {
   println!("Downloading {}...", release_name);
 
   let release_path = download_release(
-    "SpikeHD",
-    "Dorion",
+    "ChloeVPin",
+    "Dorion-V2",
     release.tag_name.clone(),
     release_name.clone(),
     path.clone(),
@@ -178,7 +178,7 @@ pub fn update_main() {
 #[cfg(target_os = "windows")]
 pub fn update_main_kinda() {
   // Same as the MSI, but we just download the zip file instead and open explorer to highlight it
-  let release = match get_release("SpikeHD", "Dorion") {
+  let release = match get_release("ChloeVPin", "Dorion-V2") {
     Ok(release) => release,
     Err(e) => {
       println!("Failed to get release: {}", e);
@@ -203,8 +203,8 @@ pub fn update_main_kinda() {
   println!("Downloading {}...", release_name);
 
   let release_path = download_release(
-    "SpikeHD",
-    "Dorion",
+    "ChloeVPin",
+    "Dorion-V2",
     release.tag_name.clone(),
     release_name.clone(),
     path.clone(),
@@ -248,7 +248,7 @@ pub fn update_main_kinda() {
  */
 #[cfg(target_os = "macos")]
 pub fn update_main() {
-  let release = match get_release("SpikeHD", "Dorion") {
+  let release = match get_release("ChloeVPin", "Dorion-V2") {
     Ok(release) => release,
     Err(e) => {
       println!("Failed to get release: {}", e);
@@ -279,8 +279,8 @@ pub fn update_main() {
   println!("Downloading {}...", release_name);
 
   let release_path = download_release(
-    "SpikeHD",
-    "Dorion",
+    "ChloeVPin",
+    "Dorion-V2",
     release.tag_name.clone(),
     release_name.clone(),
     path.clone(),

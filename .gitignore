@@ -32,3 +32,6 @@ src-tauri/updater*
 src-tauri/gen
 
 updater/target
+
+# Local issue-index scratch data
+.scratch/

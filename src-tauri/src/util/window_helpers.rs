@@ -117,16 +117,29 @@ pub fn window_zoom_level(win: tauri::WebviewWindow, value: Option<f64>) {
     .expect("Failed to set zoom level!");
 }
 
+// Removing the top bar.
+//
+// Windows/Linux: strip the frame entirely, since Dorion draws its own buttons.
+//
+// macOS: `set_decorations(false)` maps to a *borderless* window, which would also remove
+// the traffic lights — but those are wanted, they're the native affordance macOS users
+// expect. `Overlay` keeps them (floating over the top-left of the content) while still
+// letting the webview fill the window, so Discord's own header is not pushed down.
 #[cfg(not(target_os = "macos"))]
 #[tauri::command]
 pub fn remove_top_bar(win: tauri::WebviewWindow) {
   win.set_decorations(false).unwrap_or(());
 }
 
-// Top bar is broken for MacOS currently
 #[cfg(target_os = "macos")]
 #[tauri::command]
-pub fn remove_top_bar(_win: tauri::WebviewWindow) {}
+pub fn remove_top_bar(win: tauri::WebviewWindow) {
+  log!("macOS: title bar -> Overlay (keeps traffic lights)");
+
+  win
+    .set_title_bar_style(tauri::TitleBarStyle::Overlay)
+    .unwrap_or_else(|e| log!("Failed to set title bar style: {:?}", e));
+}
 
 #[cfg(target_os = "windows")]
 pub fn set_user_agent(win: &tauri::WebviewWindow) {

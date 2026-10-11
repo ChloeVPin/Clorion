@@ -79,7 +79,9 @@ window.Dorion = {
         toggle: true,
       }
     }],
-    'Dorion Titlebar': ['https://spikehd.dev/shelter-plugins/dorion-titlebar/', INJECTED_PLUGIN_OPTIONS],
+    // 'Dorion Titlebar' is vendored locally (see shared/dorion_titlebar.js) so that it can
+    // run on macOS. Upstream it is fetched from spikehd.dev and bails out when
+    // get_platform() === "macos", which is why the native title bar was never hidden there.
     'Dorion Settings': ['https://spikehd.dev/shelter-plugins/dorion-settings/', INJECTED_PLUGIN_OPTIONS],
     'Always Trust': ['https://spikehd.dev/shelter-plugins/always-trust/', INJECTED_PLUGIN_OPTIONS],
     'Dorion Notifications': ['https://spikehd.dev/shelter-plugins/dorion-notifications/', INJECTED_PLUGIN_OPTIONS],
@@ -133,7 +135,7 @@ async function init() {
   )
 
   updateOverlay({
-    subtitle: `Made with ❤️ by SpikeHD - v${version}`,
+    subtitle: `Made with ❤️ by ChloeVPin - v${version}`,
     midtitle: 'Localizing JS imports...'
   })
 

@@ -221,7 +221,8 @@ fn main() {
       functionality::extension::extension_injected,
       functionality::window::minimize,
       functionality::window::toggle_maximize,
-      #[cfg(not(target_os = "macos"))]
+      // Registered on every platform: the frontend calls this to restore the native frame
+      // when `use_native_titlebar` is on, and it has to work on macOS too.
       functionality::window::set_decorations,
       functionality::window::close,
       css_preprocess::clear_css_cache,
@@ -289,6 +290,7 @@ fn main() {
       window_helpers::ultrashow,
       window_helpers::window_zoom_level,
       util::color::get_os_accent,
+      logger::js_log,
     ])
     .on_window_event(|window, event| match event {
       tauri::WindowEvent::Focused(true) => {

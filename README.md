@@ -1,18 +1,18 @@
 <h1 align="center">
- <img height="100px" src="https://raw.githubusercontent.com/SpikeHD/Dorion/main/src-tauri/icons/icon.png" />
+ <img height="100px" src="https://raw.githubusercontent.com/ChloeVPin/Dorion-V2/main/src-tauri/icons/icon.png" />
  <br />
  Dorion
 </h1>
 <div align="center">
- <img src="https://img.shields.io/github/actions/workflow/status/SpikeHD/Dorion/build.yml" />
- <img src="https://img.shields.io/github/package-json/v/SpikeHD/Dorion" />
- <img src="https://img.shields.io/github/repo-size/SpikeHD/Dorion" />
+ <img src="https://img.shields.io/github/actions/workflow/status/ChloeVPin/Dorion-V2/build.yml" />
+ <img src="https://img.shields.io/github/package-json/v/ChloeVPin/Dorion-V2" />
+ <img src="https://img.shields.io/github/repo-size/ChloeVPin/Dorion-V2" />
 </div>
 <div align="center">
- <img src="https://img.shields.io/github/commit-activity/m/SpikeHD/Dorion" />
- <img src="https://img.shields.io/github/release-date/SpikeHD/Dorion" />
- <img src="https://img.shields.io/github/stars/SpikeHD/Dorion" />
- <img src="https://img.shields.io/github/downloads/SpikeHD/Dorion/total" />
+ <img src="https://img.shields.io/github/commit-activity/m/ChloeVPin/Dorion-V2" />
+ <img src="https://img.shields.io/github/release-date/ChloeVPin/Dorion-V2" />
+ <img src="https://img.shields.io/github/stars/ChloeVPin/Dorion-V2" />
+ <img src="https://img.shields.io/github/downloads/ChloeVPin/Dorion-V2/total" />
 </div>
 
 <div align="center">
@@ -42,34 +42,34 @@
   <tr>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_x64_en-US.msi">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_x64_en-US.msi">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/Dorion/releases/download/v6.13.2/Dorion_6.13.2.arm64-setup.exe">ARM</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0.arm64-setup.exe">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_x64.dmg">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_x64.dmg">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_aarch64.dmg">ARM</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_aarch64.dmg">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_amd64.deb">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_amd64.deb">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_armhf.deb">ARM v7</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_armhf.deb">ARM v7</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2_arm64.deb">ARM64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0_arm64.deb">ARM64</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2-1.x86_64.rpm">x86_64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0-1.x86_64.rpm">x86_64</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2-1.armhfp.rpm">ARM v7</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0-1.armhfp.rpm">ARM v7</a>
         <span>|</span>
-        <a href="https://github.com/SpikeHD/dorion/releases/download/v6.13.2/Dorion_6.13.2-1.aarch64.rpm">ARM64</a>
+        <a href="https://github.com/ChloeVPin/Dorion-V2/releases/download/v0.1.0/Dorion_0.1.0-1.aarch64.rpm">ARM64</a>
       </div>
     </td>
   </tr>
@@ -101,34 +101,34 @@
   <tr>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-pc-windows-msvc-msi.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-pc-windows-msvc-msi.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-pc-windows-msvc-nsis.zip">ARM</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-pc-windows-msvc-nsis.zip">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-apple-darwin-dmg.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-apple-darwin-dmg.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-apple-darwin-dmg.zip">ARM</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-apple-darwin-dmg.zip">ARM</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-unknown-linux-gnu-deb.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-unknown-linux-gnu-deb.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-deb.zip">ARM v7</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-deb.zip">ARM v7</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-unknown-linux-gnu-deb.zip">ARM64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-unknown-linux-gnu-deb.zip">ARM64</a>
       </div>
     </td>
     <td width="23%">
       <div align="center">
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-x86_64-unknown-linux-gnu-rpm.zip">x86_64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-x86_64-unknown-linux-gnu-rpm.zip">x86_64</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-rpm.zip">ARM v7</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-armv7-unknown-linux-gnueabihf-rpm.zip">ARM v7</a>
         <span>|</span>
-        <a href="https://nightly.link/SpikeHD/Dorion/workflows/build/main/dorion-aarch64-unknown-linux-gnu-rpm.zip">ARM64</a>
+        <a href="https://nightly.link/ChloeVPin/Dorion-V2/workflows/build/main/dorion-aarch64-unknown-linux-gnu-rpm.zip">ARM64</a>
       </div>
     </td>
   </tr>
@@ -138,7 +138,7 @@
 
 > [!TIP]
 > Dorion can also be used portably or installed via [several package managers](#package-repositories).
-> You can find portable builds in the [releases](https://github.com/SpikeHD/dorion/releases/latest/) page. You can also [build](#building) Dorion yourself!
+> You can find portable builds in the [releases](https://github.com/ChloeVPin/Dorion-V2/releases/latest/) page. You can also [build](#building) Dorion yourself!
 
 > [!NOTE]
 > ***MacOS Users***: If opening Dorion gives you "Dorion.app cannot be opened because it is from an unidentified developer", you may just need to run `sudo xattr -rd com.apple.quarantine /Applications/Dorion.app`. Alternatively, you can open the **Privacy & Security** settings pane and scroll down to the **Security** section to remove the quarantine.
@@ -180,7 +180,7 @@ I do **not** maintain any instances of Dorion in any package repositories myself
     ```
   * WinGet (Maintained by [headquarter8302](https://github.com/headquarter8302))
     ```sh
-    winget install --id SpikeHD.Dorion
+    winget install --id ChloeVPin.Dorion
     ```
 * Linux:
   * Arch AUR (Maintained by [YouKnow-sys](https://github.com/YouKnow-sys))
@@ -199,11 +199,11 @@ I do **not** maintain any instances of Dorion in any package repositories myself
     ```
 
 > [!NOTE]
-> Maintaining Dorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/SpikeHD/Dorion/pulls) to add it here!
+> Maintaining Dorion in a different package repository that I don't know about? Feel free to [open a PR](https://github.com/ChloeVPin/Dorion-V2/pulls) to add it here!
 
 # Features
 
-* [Significantly smaller](https://github.com/SpikeHD/Dorion/assets/25207995/eb603f1f-f633-4913-a25e-1316b495a08a) than the original Discord client and other web-based alternatives
+* [Significantly smaller](https://github.com/ChloeVPin/Dorion-V2/assets/25207995/eb603f1f-f633-4913-a25e-1316b495a08a) than the original Discord client and other web-based alternatives
 * Theme support
 * Global push-to-talk and custom keybinds
 * [Shelter](https://github.com/uwu/Shelter) and (optionally) [Vencord](https://github.com/vendicated/vencord)/[Equicord](https://github.com/equicord/equicord) included out of the box
@@ -219,7 +219,7 @@ Dorion comes with [shelter](https://github.com/uwu/shelter), so that should cove
 If you want to install plugins not available within the Dorion settings page, ensure you are downloading a browser-compatible version.
 
 > [!NOTE]
-> Want official support for another client mod? As long as it works on the web, feel free to submit a [feature request](https://github.com/SpikeHD/Dorion/issues/new/choose)!
+> Want official support for another client mod? As long as it works on the web, feel free to submit a [feature request](https://github.com/ChloeVPin/Dorion-V2/issues/new/choose)!
 
 > [!TIP]
 > Unsure what shelter plugins exist out there? There's more than you think! Try searching `shelter plugins` on GitHub, or use the Plugin Browser plugin:
@@ -306,7 +306,7 @@ All built files will be in `src-tauri/target/(release|debug)/`. Installation fil
 
 * (non-Windows) External images (UserBG, Decor, UserPFP, etc.) will not load
 * (non-Windows) Fonts/font-faces will not load
-* Everything else in [the issues page](https://github.com/SpikeHD/Dorion/issues)
+* Everything else in [the issues page](https://github.com/ChloeVPin/Dorion-V2/issues)
 
 # Troubleshooting
 
@@ -382,7 +382,7 @@ so if you download a plugin, extension, or theme, just pop it into the `plugins`
 
 # Contributing
 
-Issues, PRs, etc. are all welcome! For guidelines and tips, see [CONTRIBUTING.md](https://github.com/SpikeHD/Dorion/blob/main/CONTRIBUTING.md)
+Issues, PRs, etc. are all welcome! For guidelines and tips, see [CONTRIBUTING.md](https://github.com/ChloeVPin/Dorion-V2/blob/main/CONTRIBUTING.md)
 
 ## Translating
 
@@ -390,20 +390,20 @@ See [TRANSLATING.md](./TRANSLATING.md)
 
 ## Contributors
 
-<a href="https://github.com/spikehd/dorion/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=spikehd/dorion" />
+<a href="https://github.com/ChloeVPin/Dorion-V2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=chloevpin/dorion-v2" />
 </a>
 
 # Screenshots
 
 ## Full Installed Size Comparison (Windows)
-<img width="100%" src="https://github.com/SpikeHD/Dorion/assets/25207995/eb603f1f-f633-4913-a25e-1316b495a08a" />
+<img width="100%" src="https://github.com/ChloeVPin/Dorion-V2/assets/25207995/eb603f1f-f633-4913-a25e-1316b495a08a" />
 
 ## Some Performance Settings
 <img width="100%" src="https://github.com/user-attachments/assets/a3364e03-7de2-4293-8cd7-cf655e99546f" />
 
 Theme: [OldCord](https://betterdiscord.app/theme/OldCord)
 
-<img width="100%" src="https://github.com/SpikeHD/Dorion/assets/25207995/c73a2333-31fb-404a-9489-5e1b1f8cfa54" />
+<img width="100%" src="https://github.com/ChloeVPin/Dorion-V2/assets/25207995/c73a2333-31fb-404a-9489-5e1b1f8cfa54" />
 
 Theme: [Fluent](https://betterdiscord.app/theme/Fluent)

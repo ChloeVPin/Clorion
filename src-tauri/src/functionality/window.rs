@@ -21,8 +21,9 @@ pub fn toggle_maximize(win: tauri::WebviewWindow) {
   }
 }
 
+// Restores the native frame when `use_native_titlebar` is set. Needs no macOS special
+// case: `set_decorations(true)` maps back to a normal titled window with traffic lights.
 #[tauri::command]
-#[cfg(not(target_os = "macos"))]
 pub fn set_decorations(win: tauri::WebviewWindow, enable: bool) {
   win.set_decorations(enable).unwrap_or_default();
 }
