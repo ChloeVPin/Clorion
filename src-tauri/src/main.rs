@@ -80,6 +80,21 @@ fn should_disable_plugins() -> bool {
   args::is_safemode()
 }
 
+/// Turn a `clorion://`, `dorion://` or `discord://` url into a Discord web url and point
+/// the main window at it.
+fn navigate_deep_link(app: &tauri::AppHandle, url: &Url) {
+  let path = url.path();
+  log!("Deep link event: {path}");
+
+  if let Some(win) = app.get_webview_window("main") {
+    let full_url = get_client_url();
+
+    if let Ok(url) = Url::parse(format!("{full_url}{path}").as_str()) {
+      win.navigate(url).unwrap_or_default();
+    }
+  }
+}
+
 fn main() {
   if args::is_help() {
     return;
@@ -424,25 +439,26 @@ fn main() {
         load_extensions(&win);
       }
 
-      app.deep_link().on_open_url({
+      let deep_link = app.deep_link();
+
+      deep_link.on_open_url({
         let handle = app.handle().clone();
 
         move |event| {
           if let Some(url) = event.urls().first() {
-            let path = url.path();
-            log!("Deep link event: {path}");
-
-            if let Some(win) = handle.get_webview_window("main") {
-              let full_url = get_client_url();
-              let url = Url::parse(format!("{full_url}{path}").as_str());
-
-              if let Ok(url) = url {
-                win.navigate(url).unwrap_or_default();
-              }
-            }
+            navigate_deep_link(&handle, url);
           }
         }
       });
+
+      // If the app was *launched* by the link rather than already running, macOS delivers
+      // that url before the handler above is attached, so it would be dropped and the
+      // invite would silently not open. Replay it once the window exists.
+      if let Ok(Some(urls)) = deep_link.get_current()
+        && let Some(url) = urls.first()
+      {
+        navigate_deep_link(app.handle(), url);
+      }
 
       configure(&win);
 
